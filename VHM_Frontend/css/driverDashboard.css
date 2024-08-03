@@ -1,0 +1,157 @@
+/* General body styling */
+body {
+  margin: 0; /* Remove default margin around the body */
+  font-family: Arial, sans-serif; /* Use Arial or sans-serif font for text */
+  background: #ebefff; /* Light blue background color */
+  color: #333; /* Dark gray text color for readability */
+}
+
+/* Wrapper to manage layout for sidebar and content */
+#wrapper {
+  display: flex; /* Use flexbox for layout management */
+  align-items: stretch; /* Make children stretch to fit the height of the wrapper */
+}
+
+/* Sidebar styling */
+#sidebar-wrapper {
+  min-height: 100vh; /* Sidebar takes up the full viewport height */
+  width: 250px; /* Fixed width for the sidebar */
+  margin-left: -250px; /* Hide sidebar off-screen initially */
+  transition: margin 0.25s ease-out; /* Smooth transition effect for sliding in/out */
+  background-color: #800080; /* Purple background color for the sidebar */
+}
+
+/* Adjust sidebar position when 'toggled' class is added */
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0; /* Slide in the sidebar */
+}
+
+/* Content area styling */
+#page-content-wrapper {
+  width: 100%; /* Full width to occupy remaining space beside the sidebar */
+}
+
+/* Sidebar heading styling */
+.sidebar-heading {
+  font-size: 1.2rem; /* Font size for the heading */
+  background: #800080; /* Purple background for the heading */
+  padding: 0.75rem 1rem; /* Padding around the heading text */
+  text-align: center; /* Center-align the heading text */
+}
+
+/* List items in the sidebar */
+.list-group-item {
+  border: none; /* Remove default borders */
+  color: white; /* White text color */
+}
+
+/* Active state for list items */
+.list-group-item.active {
+  background-color: #800080; /* Purple background for active items */
+  color: rgb(1, 244, 232); /* Highlighted text color */
+}
+
+/* Hover effect for list items */
+.list-group-item:hover {
+  color: rgb(1, 244, 232); /* Change text color on hover */
+}
+
+/* Navbar primary button styling */
+.navbar .btn-primary {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  padding: 0.75rem 1rem; /* Padding inside the button */
+  font-size: 1.2rem; /* Font size for button text */
+}
+
+/* Centering navbar brand and icon */
+.navbar-center {
+  position: absolute; /* Absolute positioning for centering */
+  left: 50%; /* Move element to the center horizontally */
+  transform: translateX(-50%); /* Adjust position to truly center */
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
+}
+
+/* Company icon styling */
+.company-icon {
+  width: 30px; /* Fixed width for the company icon */
+  height: 30px; /* Fixed height for the company icon */
+}
+
+/* User photo styling */
+.user-photo {
+  width: 30px; /* Fixed width for the user photo */
+  height: 30px; /* Fixed height for the user photo */
+  border-radius: 50%; /* Circular shape for the user photo */
+}
+
+/* Container for padding and layout */
+.container-fluid {
+  padding: 20px; /* Padding inside the container */
+}
+
+/* Vehicle and sensors info boxes styling */
+.vehicle-info,
+.sensors-info {
+  background-color: white; /* White background for info boxes */
+  border: 2px solid #ddd; /* Light gray border */
+  border-radius: 15px; /* Rounded corners */
+  padding: 20px; /* Padding inside the boxes */
+  width: 100%; /* Full width of the container */
+  max-width: 1200px; /* Maximum width for larger screens */
+  margin-bottom: 20px; /* Space below the boxes */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth effect */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions for hover effects */
+}
+
+/* Hover effect for info boxes */
+.vehicle-info:hover,
+.sensors-info:hover {
+  transform: scale(1.02); /* Slight zoom effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+/* Title styling within info boxes */
+.vehicle-info h2,
+.sensors-info h2 {
+  text-align: center; /* Center-align the text */
+  color: #4b0082; /* Indigo color for titles */
+  margin: 0 0 20px 0; /* Margin below the title */
+  font-size: 2rem; /* Font size for the title */
+}
+
+/* Profile container styling */
+.profile-container {
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Wrap items to the next line */
+  gap: 20px; /* Space between items */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  margin-top: 20px; /* Space above the container */
+}
+
+/* Individual profile item styling */
+.profile-item {
+  background-color: white; /* White background */
+  padding: 20px; /* Padding inside the item */
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  flex-basis: calc(50% - 20px); /* Flex item basis with margin adjustment */
+  max-width: 400px; /* Maximum width for profile items */
+  margin-bottom: 20px; /* Space below the profile item */
+}
+
+/* Profile item title styling */
+.profile-item h3 {
+  margin-top: 0; /* Remove top margin */
+  color: #800080; /* Purple color for the title */
+}
+
+/* Sensor value styling within profile items */
+.profile-item .sensor-value {
+  font-size: 1.5rem; /* Larger font size for sensor values */
+  font-weight: bold; /* Bold text for emphasis */
+  color: #4b0082; /* Indigo color for sensor values */
+}

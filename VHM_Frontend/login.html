@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - AutoHealthTracker</title>
+    <!-- Link to custom CSS for login page styling -->
+    <link rel="stylesheet" href="./css/login.css" />
+</head>
+<body>
+    <!-- Main container for login page -->
+    <div class="login-container">
+        <!-- Box that holds the login form and associated elements -->
+        <div class="login-box">
+            <!-- Logo and brand name -->
+            <div class="logo">
+                <img src="./assets/Logo.png" alt="AutoHealthTracker Logo" />
+                <span>AutoHealthTracker</span>
+            </div>
+            <!-- Login heading -->
+            <h1>Login</h1>
+            <!-- Login form -->
+            <form id="login-form" method="post" action="/login/">
+                <!-- Input group for username -->
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required />
+                </div>
+                <!-- Input group for password -->
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required />
+                </div>
+                <!-- Submit button for login -->
+                <button type="submit">Login</button>
+            </form>
+            <!-- Link to registration page for users who don't have an account -->
+            <p>Don't have an account? <a href="register.html">Register</a></p>
+        </div>
+    </div>
+    <!-- Link to custom JavaScript for login page functionality -->
+    <script src="./js/login.js"></script>
+</body>
+</html>

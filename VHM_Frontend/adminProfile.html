@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Profile</title>
+    <!-- Link to Bootstrap CSS for styling -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Link to FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Link to custom CSS for additional styles -->
+    <link rel="stylesheet" href="./css/adminProfile.css">
+</head>
+<body>
+    <!-- Main container for layout -->
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar for navigation -->
+        <div id="sidebar-wrapper">
+            <!-- Sidebar heading with the app name -->
+            <div class="sidebar-heading text-center text-white py-3 primary-text fs-4 fw-bold text-uppercase border-bottom">
+                AutoHealthTracker
+            </div>
+            <!-- List of navigation links -->
+            <div class="list-group list-group-flush my-3">
+                <a href="./admin-dashboard.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fas fa-tachometer-alt"></i> Dashboard
+                </a>
+                <a href="./driver-list.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fas fa-users"></i> Drivers
+                </a>
+                <a href="./adminProfile.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold active">
+                    <i class="fas fa-user-circle"></i> Profile
+                </a>
+                <a href="./admin-settings.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fas fa-cog"></i> Settings
+                </a>
+                <a href="./login.html" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold">
+                    <i class="fas fa-sign-out-alt"></i> Sign Out
+                </a>
+            </div>
+        </div>
+
+        <!-- Page content -->
+        <div id="page-content-wrapper">
+            <!-- Navbar with branding and user info -->
+            <nav class="navbar navbar-expand-lg fw-bold border-bottom">
+                <!-- Button to toggle the sidebar visibility -->
+                <button class="btn btn-primary" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="navbar-center">
+                    <!-- Company logo and name -->
+                    <img src="./assets/Logo.png" alt="Company Icon" class="company-icon mr-2">
+                    <span class="navbar-brand mb-0 h1">Auto Health Tracker</span>
+                </div>
+                <div class="ml-auto d-flex align-items-center">
+                    <!-- Admin name and profile picture -->
+                    <span class="mr-2">Admin</span>
+                    <img src="./assets/adminProfilePic.jpg" alt="User Photo" class="user-photo">
+                </div>
+            </nav>
+            <!-- Main content section -->
+            <div class="container-fluid">
+                <!-- Page title -->
+                <h1 class="mt-4">Admin Profile</h1>
+                <!-- Profile information container -->
+                <div class="profile-container">
+                    <!-- Profile items displaying various details -->
+                    <div class="profile-item">
+                        <h3>Admin Name</h3>
+                        <p>Admin</p>
+                    </div>
+                    <div class="profile-item">
+                        <h3>Email</h3>
+                        <p>admin1234@gmail.com</p>
+                    </div>
+                    <div class="profile-item">
+                        <h3>Number of bikes</h3>
+                        <p>2</p>
+                    </div>
+                    <div class="profile-item">
+                        <h3>Number of cars</h3>
+                        <p>5</p>
+                    </div>
+                    <div class="profile-item">
+                        <h3>Number of trucks</h3>
+                        <p>7</p>
+                    </div>
+                    <div class="profile-item">
+                        <h3>Last Login</h3>
+                        <p>03/08/2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts for functionality -->
+    <!-- jQuery library for JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Popper.js for Bootstrap components -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <!-- Bootstrap JavaScript for responsive components -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Script to toggle the sidebar visibility -->
+    <script>
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+</body>
+</html>

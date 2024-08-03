@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Driver Profile</title>
+    <!-- Link to Bootstrap CSS for responsive layout and styling -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <!-- Link to FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <!-- Link to custom CSS for additional styling -->
+    <link rel="stylesheet" href="./css/adminProfile.css" />
+</head>
+<body>
+    <!-- Wrapper div for sidebar and content -->
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar section -->
+        <div id="sidebar-wrapper">
+            <!-- Sidebar heading with company name -->
+            <div class="sidebar-heading text-center text-white py-3 primary-text fs-4 fw-bold text-uppercase border-bottom">
+                AutoHealthTracker
+            </div>
+            <!-- Sidebar navigation links -->
+            <div class="list-group list-group-flush my-3">
+                <!-- Dashboard link -->
+                <a href="./driver_dashboard.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fas fa-tachometer-alt"></i> Dashboard
+                </a>
+                <!-- Profile link (active) -->
+                <a href="#profile" class="list-group-item list-group-item-action bg-transparent second-text fw-bold active">
+                    <i class="fas fa-user-circle"></i> Profile
+                </a>
+                <!-- Settings link -->
+                <a href="./driver-settings.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fas fa-cog"></i> Settings
+                </a>
+                <!-- Sign Out link -->
+                <a href="./login.html" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold">
+                    <i class="fas fa-sign-out-alt"></i> Sign Out
+                </a>
+            </div>
+        </div>
+
+        <!-- Page content wrapper -->
+        <div id="page-content-wrapper">
+            <!-- Navbar with toggle button and user info -->
+            <nav class="navbar navbar-expand-lg fw-bold border-bottom">
+                <!-- Button to toggle sidebar -->
+                <button class="btn btn-primary" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <!-- Navbar brand with logo and title -->
+                <div class="navbar-center">
+                    <img src="./assets/Logo.png" alt="Company Icon" class="company-icon mr-2" />
+                    <span class="navbar-brand mb-0 h1">Auto Health Tracker</span>
+                </div>
+                <!-- User info section -->
+                <div class="ml-auto d-flex align-items-center">
+                    <span class="mr-2">User</span>
+                    <img src="./assets/adminProfilePic.jpg" alt="User Photo" class="user-photo" />
+                </div>
+            </nav>
+            <!-- Main content area -->
+            <div class="container-fluid">
+                <!-- Page title -->
+                <h1 class="mt-4">Driver Profile</h1>
+                <!-- Profile information section -->
+                <div class="profile-container">
+                    <!-- Profile item for Driver Name -->
+                    <div class="profile-item">
+                        <h3>Driver Name</h3>
+                        <p>Jignesh Modi</p>
+                    </div>
+                    <!-- Profile item for Email -->
+                    <div class="profile-item">
+                        <h3>Email</h3>
+                        <p>driver@example.com</p>
+                    </div>
+                    <!-- Profile item for Mobile Number -->
+                    <div class="profile-item">
+                        <h3>Mobile number</h3>
+                        <p>364645475</p>
+                    </div>
+                    <!-- Profile item for Age -->
+                    <div class="profile-item">
+                        <h3>Age</h3>
+                        <p>21</p>
+                    </div>
+                    <!-- Profile item for Licence Number -->
+                    <div class="profile-item">
+                        <h3>Licence No</h3>
+                        <p>LH 32323</p>
+                    </div>
+                    <!-- Profile item for Address -->
+                    <div class="profile-item">
+                        <h3>Address</h3>
+                        <p>Dange chowk, nimbalgarnagar, tathwade, pune-33</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts for JavaScript functionality -->
+    <!-- jQuery for DOM manipulation -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Popper.js for tooltip and popover positioning -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <!-- Bootstrap JS for interactive components -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Script to toggle the sidebar -->
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+</body>
+</html>

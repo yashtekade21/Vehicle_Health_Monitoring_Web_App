@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - AutoHealthTracker</title>
+    <!-- Link to custom CSS for registration page styling -->
+    <link rel="stylesheet" href="./css/register.css" />
+</head>
+<body>
+    <!-- Main container for the registration page -->
+    <div class="login-container">
+        <!-- Box that holds the registration form and related elements -->
+        <div class="login-box">
+            <!-- Logo and brand name -->
+            <div class="logo">
+                <img src="./assets/Logo.png" alt="Logo"> <!-- Update the src path to your logo image -->
+                <h1>Vehicle Health Monitoring</h1>
+            </div>
+            <!-- Registration heading -->
+            <h2>Register</h2>
+            <!-- Horizontal rule to separate heading from form -->
+            <hr width="100%" size="2">
+            <!-- Placeholder for error messages -->
+            <div id="error-message"></div>
+            <!-- Registration form -->
+            <form id="register-form" enctype="multipart/form-data">
+                <!-- Input group for full name -->
+                <div class="input-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" required />
+                </div>
+                <!-- Input group for username -->
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required />
+                </div>
+                <!-- Input group for email -->
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+                <!-- Input group for password -->
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required />
+                </div>
+                <!-- Input group for confirm password -->
+                <div class="input-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required />
+                </div>
+                <!-- Input group for age -->
+                <div class="input-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" required />
+                </div>
+                <!-- Input group for contact number -->
+                <div class="input-group">
+                    <label for="contact_no">Contact No</label>
+                    <input type="text" id="contact_no" name="contact_no" required />
+                </div>
+                <!-- Input group for license number -->
+                <div class="input-group">
+                    <label for="license_no">License No</label>
+                    <input type="text" id="license_no" name="license_no" required />
+                </div>
+                <!-- Input group for address -->
+                <div class="input-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" required />
+                </div>
+                <!-- Submit button for the registration form -->
+                <button type="submit">Register</button>
+            </form>
+            <!-- Link to the login page for users who already have an account -->
+            <p>Already have an account? <a href="login.html">Login</a></p>
+        </div>
+    </div>
+    <!-- Link to custom JavaScript for registration page functionality -->
+    <script src="./js/register.js"></script>
+</body>
+</html>

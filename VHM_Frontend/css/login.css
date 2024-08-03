@@ -1,0 +1,132 @@
+/* General body styling */
+body {
+    margin: 0; /* Remove default margin */
+    font-family: 'Arial', sans-serif; /* Use Arial font, with sans-serif as fallback */
+    background-color: #ebefff; /* Light blue background color */
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    min-height: 100vh; /* Ensure body takes at least full viewport height */
+    overflow-y: auto; /* Allow vertical scrolling if content overflows */
+}
+
+/* Styling for the login container */
+.login-container {
+    width: 100%; /* Full width */
+    max-width: 400px; /* Maximum width of 400px */
+    background: #ebefff; /* Light blue background color */
+    border-radius: 20px; /* Rounded corners */
+    padding: 20px; /* Padding inside the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth effect */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    margin: 20px; /* Margin around the container */
+}
+
+/* Flexbox layout for the login box */
+.login-box {
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+/* Styling for the logo section */
+.logo {
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    margin-bottom: 20px; /* Space below the logo section */
+    text-align: center; /* Center text */
+}
+
+/* Styling for the logo image */
+.logo img {
+    width: 50px; /* Fixed width for the logo image */
+    height: 50px; /* Fixed height for the logo image */
+    margin-bottom: 10px; /* Space below the logo image */
+}
+
+/* Styling for the logo text */
+.logo span {
+    font-size: 20px; /* Font size for the logo text */
+    color: black; /* Black text color */
+}
+
+/* Styling for main heading */
+h1 {
+    font-size: 24px; /* Font size for the main heading */
+    margin: 10px 0; /* Margin above and below the heading */
+    color: black; /* Black text color */
+    text-align: center; /* Center text */
+}
+
+/* Styling for forms */
+form {
+    width: 100%; /* Full width */
+}
+
+/* Styling for input groups */
+.input-group {
+    margin-bottom: 15px; /* Space below each input group */
+}
+
+/* Label styling */
+label {
+    font-size: 14px; /* Font size for labels */
+    color: #800080; /* Purple text color */
+    display: block; /* Block-level element */
+    margin-bottom: 5px; /* Space below the label */
+}
+
+/* Input field styling */
+input {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding inside the input field */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 20px; /* Rounded corners */
+    font-size: 16px; /* Font size for input text */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Input field focus styling */
+input:focus {
+    border-color: #800080; /* Purple border on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Button styling */
+button {
+    width: 100%; /* Full width */
+    padding: 10px 20px; /* Padding inside the button */
+    background-color: #800080; /* Purple background color */
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+    border-radius: 20px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size for button text */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #800080; /* Maintain the same color on hover */
+}
+
+/* Link styling within the login container */
+.login-container a {
+    color: #800080; /* Purple text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Link hover effect */
+.login-container a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Paragraph styling */
+p {
+    margin-top: 20px; /* Space above the paragraph */
+    font-size: 14px; /* Font size for paragraph text */
+    text-align: center; /* Center text */
+    color: #800080; /* Purple text color */
+}

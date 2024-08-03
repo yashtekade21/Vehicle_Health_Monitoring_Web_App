@@ -1,0 +1,176 @@
+/* General body styling */
+body {
+    margin: 0; /* Remove default margin */
+    font-family: Arial, Helvetica, sans-serif; /* Font family for the whole page */
+    background-color: #ebefff; /* Light blue background color */
+}
+
+/* Wrapper to manage sidebar and content layout */
+#wrapper {
+    display: flex; /* Use flexbox layout */
+    align-items: stretch; /* Stretch items to fill the container */
+}
+
+/* Sidebar styling */
+#sidebar-wrapper {
+    min-height: 100vh; /* Full height of the viewport */
+    width: 250px; /* Fixed width for sidebar */
+    margin-left: -250px; /* Hide sidebar off-screen initially */
+    transition: margin 0.25s ease-out; /* Smooth transition for sidebar visibility */
+    background-color: #800080; /* Purple background color */
+}
+
+/* Show sidebar when wrapper has 'toggled' class */
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: 0; /* Move sidebar into view */
+}
+
+/* Page content wrapper styling */
+#page-content-wrapper {
+    width: 100%; /* Full width of the container */
+}
+
+/* Sidebar heading styling */
+.sidebar-heading {
+    font-size: 1.2rem; /* Font size for the heading */
+    background: #800080; /* Purple background color */
+    padding: 0.75rem 1rem; /* Padding inside the heading */
+    text-align: center; /* Center the text */
+}
+
+/* Styling for list group items */
+.list-group-item {
+    border: none; /* Remove borders from list items */
+    color: white; /* White text color */
+}
+
+/* Active state for list group items */
+.list-group-item.active {
+    background-color: #800080; /* Active background color */
+    color: rgb(1, 244, 232); /* Active text color */
+}
+
+/* Hover effect for list group items */
+.list-group-item:hover {
+    color: rgb(1, 244, 232); /* Change text color on hover */
+}
+
+/* Modal list group styling */
+.modal-list-group {
+    color: black; /* Text color for modal list items */
+    justify-content: end; /* Align items to the end */
+}
+
+/* Modal title styling */
+.modal-title {
+    color: red; /* Red color for modal titles */
+}
+
+/* Styling for vehicle cards container */
+.vehicle-cards {
+    display: flex; /* Use flexbox layout */
+    flex-wrap: wrap; /* Allow wrapping of cards */
+    gap: 20px; /* Space between cards */
+    margin-top: 20px; /* Top margin */
+}
+
+/* Card container styling */
+.card-container {
+    display: flex; /* Use flexbox layout */
+    gap: 50px; /* Space between card containers */
+    justify-content: center; /* Center the card containers */
+    flex-wrap: wrap; /* Allow wrapping of card containers */
+    margin-top: 20px; /* Top margin */
+    margin: 10px; /* Margin around card containers */
+}
+
+/* Styling for individual cards */
+.card {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
+    border-radius: 10px; /* Rounded corners */
+    width: 350px; /* Fixed width for cards */
+    padding: 20px; /* Padding inside the card */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for card */
+    transition: transform 0.3s; /* Smooth scaling transition */
+}
+
+/* Hover effect for cards */
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarge card on hover */
+}
+
+/* Styling for card images */
+.card-image {
+    width: 100%; /* Full width of card */
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Cover the image area */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Styling for card content */
+.card-content {
+    text-align: center; /* Center text inside the card */
+    margin-top: 10px; /* Top margin */
+}
+
+/* Heading inside card content */
+.card-content h2 {
+    margin: 10px 0; /* Vertical margin for headings */
+    color: black; /* Black text color */
+}
+
+/* Container for buttons inside cards */
+.btn-container {
+    display: flex; /* Use flexbox layout */
+    justify-content: space-around; /* Space buttons evenly */
+    margin-top: 10px; /* Top margin */
+}
+
+/* Primary button styling */
+.primary-btn {
+    background-color: #800080; /* Purple background color */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Padding inside button */
+    border: none; /* Remove border */
+    border-radius: 20px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 14px; /* Font size */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+/* Hover effect for primary buttons */
+.primary-btn:hover {
+    background-color: #4e0fa3; /* Darker background color on hover */
+}
+
+/* Navbar button styling */
+.navbar .btn-primary {
+    display: flex; /* Use flexbox layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    padding: 0.75rem 1rem; /* Padding inside button */
+    font-size: 1.2rem; /* Font size */
+}
+
+/* Centering content in the navbar */
+.navbar-center {
+    position: absolute; /* Absolute positioning */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    display: flex; /* Use flexbox layout */
+    align-items: center; /* Center items vertically */
+}
+
+/* Company icon styling */
+.company-icon {
+    width: 30px; /* Fixed width */
+    height: 30px; /* Fixed height */
+}
+
+/* User photo styling */
+.user-photo {
+    width: 30px; /* Fixed width */
+    height: 30px; /* Fixed height */
+    border-radius: 50%; /* Circular shape */
+}

@@ -1,0 +1,119 @@
+/* General body styling */
+body {
+    margin: 0; /* Remove default margin */
+    font-family: Arial, Helvetica, sans-serif; /* Set a clean, sans-serif font family */
+    background-color: #ebefff; /* Light blue background color */
+}
+
+/* Wrapper for layout, holding sidebar and page content */
+#wrapper {
+    display: flex; /* Use flexbox for layout */
+    align-items: stretch; /* Ensure children elements stretch to fit the container */
+}
+
+/* Sidebar styling */
+#sidebar-wrapper {
+    min-height: 100vh; /* Sidebar spans the full viewport height */
+    width: 250px; /* Fixed width for the sidebar */
+    margin-left: -250px; /* Hide sidebar initially by moving it off-screen */
+    transition: margin 0.25s ease-out; /* Smooth transition for toggling sidebar visibility */
+    background-color: #800080; /* Purple background color */
+}
+
+/* Adjust sidebar position when wrapper has the 'toggled' class */
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: 0; /* Slide in the sidebar */
+}
+
+/* Content area styling */
+#page-content-wrapper {
+    width: 100%; /* Full width to occupy the remaining space */
+}
+
+/* Sidebar heading styling */
+.sidebar-heading {
+    font-size: 1.2rem; /* Font size for the heading */
+    background: #800080; /* Same purple background as the sidebar */
+    padding: 0.75rem 1rem; /* Padding around the heading text */
+    text-align: center; /* Center-align the heading text */
+}
+
+/* List items in the sidebar */
+.list-group-item {
+    border: none; /* Remove default borders */
+    color: white; /* White text color */
+}
+
+/* Active state for list items */
+.list-group-item.active {
+    background-color: #800080; /* Highlight background color */
+    color: rgb(1, 244, 232); /* Highlighted text color */
+}
+
+/* Hover state for list items */
+.list-group-item:hover {
+    color: rgb(1, 244, 232); /* Change text color on hover */
+}
+
+/* Profile container styling */
+.profile-container {
+    display: flex; /* Use flexbox layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 20px; /* Space between items */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    margin-top: 20px; /* Space above the profile container */
+}
+
+/* Individual profile item styling */
+.profile-item {
+    background-color: white; /* White background for profile items */
+    padding: 20px; /* Padding inside the profile item */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    flex-basis: calc(50% - 20px); /* Two items per row with space in between */
+    max-width: 400px; /* Maximum width of profile items */
+    margin-bottom: 20px; /* Space below each profile item */
+}
+
+/* Profile item title styling */
+.profile-item h3 {
+    margin-top: 0; /* Remove margin above the title */
+    color: #800080; /* Purple text color */
+}
+
+/* Profile item text styling */
+.profile-item p {
+    margin: 5px 0; /* Margin above and below text */
+}
+
+/* Navbar primary button styling */
+.navbar .btn-primary {
+    display: flex; /* Use flexbox to center content */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    padding: 0.75rem 1rem; /* Padding inside the button */
+    font-size: 1.2rem; /* Font size for the button text */
+}
+
+/* Centering navbar brand and icon */
+.navbar-center {
+    position: absolute; /* Absolute positioning for centering */
+    left: 50%; /* Move element to the center */
+    transform: translateX(-50%); /* Adjust position to truly center */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+}
+
+/* Company icon styling */
+.company-icon {
+    width: 30px; /* Fixed width for the icon */
+    height: 30px; /* Fixed height for the icon */
+}
+
+/* User photo styling */
+.user-photo {
+    width: 30px; /* Fixed width for the user photo */
+    height: 30px; /* Fixed height for the user photo */
+    border-radius: 50%; /* Circular shape for the photo */
+}

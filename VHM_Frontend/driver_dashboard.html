@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Vehicle Information</title>
+    <!-- Bootstrap CSS for styling -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <!-- Custom CSS for additional styles -->
+    <link rel="stylesheet" href="./css/driverDashboard.css" />
+    <!-- Chart.js library (consider removing if unused) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar with navigation links -->
+        <div id="sidebar-wrapper">
+            <div class="sidebar-heading text-center text-white py-3 primary-text fs-4 fw-bold text-uppercase border-bottom">
+                AutoHealthTracker
+            </div>
+            <div class="list-group list-group-flush my-3">
+                <a href="./driver_dashboard.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold active">
+                    <i class="fas fa-tachometer-alt"></i> Dashboard
+                </a>
+                <a href="./driver-profile.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fas fa-user-circle"></i> Profile
+                </a>
+                <a href="./driver-settings.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fas fa-cog"></i> Settings
+                </a>
+                <a href="./login.html" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold">
+                    <i class="fas fa-sign-out-alt"></i> Sign Out
+                </a>
+            </div>
+        </div>
+ 
+        <!-- Main content wrapper -->
+        <div id="page-content-wrapper">
+            <!-- Navbar with toggle button and user info -->
+            <nav class="navbar navbar-expand-lg fw-bold border-bottom">
+                <button class="btn btn-primary" id="menu-toggle" aria-label="Toggle Sidebar">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="navbar-center">
+                    <img src="./assets/Logo.png" alt="Company Icon" class="company-icon mr-2" />
+                    <span class="navbar-brand mb-0 h1">Auto Health Tracker</span>
+                </div>
+                <div class="ml-auto d-flex align-items-center">
+                    <span class="mr-2">User</span>
+                    <img src="./assets/adminProfilePic.jpg" alt="User Photo" class="user-photo" />
+                </div>
+            </nav>
+            <!-- Main content section -->
+            <div class="container-fluid">
+                <h1 class="mt-4">Vehicle Information</h1>
+                <section class="vehicle-info">
+                    <div class="info">
+                        <p><strong>Brand:</strong> Maruti Suzuki</p>
+                        <p><strong>Model:</strong> Swift</p>
+                        <p><strong>Vehicle Number:</strong> MH14KQ45</p>
+                    </div>
+                </section>
+                <section class="sensors-info">
+                    <h2>Vehicle Sensors</h2>
+                    <div class="profile-container">
+                        <div class="profile-item">
+                            <h3>Fuel Level</h3>
+                            <div class="sensor-value">70%</div>
+                        </div>
+                        <div class="profile-item">
+                            <h3>Load Sensor</h3>
+                            <div class="sensor-value">150kg</div>
+                        </div>
+                        <div class="profile-item">
+                            <h3>Speedometer</h3>
+                            <div class="sensor-value">60 km/h</div>
+                        </div>
+                        <div class="profile-item">
+                            <h3>Brake Pad Wear</h3>
+                            <div class="sensor-value">25%</div>
+                        </div>
+                        <div class="profile-item">
+                            <h3>Tire Pressure</h3>
+                            <div class="sensor-value">32 PSI</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+ 
+    <!-- JavaScript dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+</body>
+</html>

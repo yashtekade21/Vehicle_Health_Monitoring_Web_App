@@ -1,0 +1,113 @@
+/* General body styling */
+body {
+  background: #ebefff; /* Light blue background color */
+  color: #fff; /* White text color */
+  font-family: "Roboto", sans-serif; /* Use Roboto font or sans-serif as fallback */
+  min-height: 100vh; /* Ensure body takes at least full viewport height */
+  display: flex; /* Use flexbox for centering content */
+  align-items: center; /* Vertically center the content */
+  justify-content: center; /* Horizontally center the content */
+}
+
+/* Margin for the form to separate from other elements */
+#addVehicleForm {
+  margin-bottom: 20px; /* Space below the form */
+}
+
+/* Container styling for form and other content */
+.container {
+  background: white; /* White background for container */
+  color: black; /* Black text color */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Shadow for depth effect */
+  backdrop-filter: blur(8px); /* Blur effect for the background */
+  -webkit-backdrop-filter: blur(8px); /* Webkit prefix for blur effect */
+  padding: 20px; /* Padding inside the container */
+  width: 90%; /* Container width relative to its parent */
+}
+
+/* Primary button styling */
+.btn-primary {
+  background-color: #800080; /* Purple background color */
+  border-color: #800080; /* Purple border color */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition for background and transform */
+}
+
+/* Hover effect for primary button */
+.btn-primary:hover {
+  background-color: #4e0fa3; /* Darker blue background on hover */
+  transform: scale(1.05); /* Slightly zoom in on hover */
+}
+
+/* Table styling */
+.table {
+  color: black; /* Black text color for table */
+  background-color: #ebefff; /* Light blue background for table */
+}
+
+/* Table header styling */
+.table thead {
+  background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background for header */
+}
+
+/* Hover effect for table rows */
+.table-hover tbody tr:hover {
+  background-color: rgba(255, 251, 251, 0.3); /* Light semi-transparent background on row hover */
+}
+
+/* Badge styling */
+.badge {
+  padding: 10px; /* Padding inside the badge */
+  font-size: 1rem; /* Font size for badge text */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Success badge color */
+.badge-success {
+  background-color: #28a745; /* Green background color */
+}
+
+/* Danger badge color */
+.badge-danger {
+  background-color: #dc3545; /* Red background color */
+}
+
+/* Warning badge color */
+.badge-warning {
+  background-color: #ffc107; /* Yellow background color */
+}
+
+/* Input group styling */
+.input-group {
+  max-width: 400px; /* Maximum width of the input group */
+  margin: 0 auto; /* Center the input group horizontally */
+}
+
+/* Styling for form control in the input group */
+.input-group .form-control {
+  border-radius: 50px 0 0 50px; /* Rounded left corners */
+}
+
+/* Styling for input group append text */
+.input-group .input-group-append .input-group-text {
+  border-radius: 0 50px 50px 0; /* Rounded right corners */
+  color: #fff; /* White text color */
+}
+
+/* Hover effect for input group append text */
+.input-group .input-group-append .input-group-text:hover {
+  background-color: #4e0fa3; /* Darker blue background on hover */
+}
+
+/* Styling for images */
+img {
+  border-radius: 50%; /* Circular shape for images */
+  width: 36px; /* Fixed width */
+  height: 36px; /* Fixed height */
+  margin-right: 10px; /* Space to the right of the image */
+}
+
+/* Margin adjustment for display-4 class */
+.display-4 {
+  margin-right: 80px; /* Space to the right */
+}

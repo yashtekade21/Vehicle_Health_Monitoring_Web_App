@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Driver List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="/css/driverList.css" />
+</head>
+<body>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <div class="sidebar-heading text-white text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom">
+                AutoHealthTracker
+            </div>
+            <div class="list-group list-group-flush my-3">
+                <a href="admin-dashboard.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">Dashboard</a>
+                <a href="driver-list.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold active">Drivers</a>
+                <a href="adminProfile.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">Profile</a>
+                <a href="admin-settings.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">Settings</a>
+                <div>
+                    <a href="login.html" class="list-group-item list-group-item-action bg-transparent text-danger text-danger fw-bold">Sign Out</a>
+                </div>
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <button class="btn btn-primary" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="navbar-center">
+                    <img src="/assets/Logo.png" alt="Company Icon" class="company-icon mr-2" />
+                    <span class="navbar-brand mb-0 h1">Auto Health Tracker</span>
+                </div>
+                <div class="ml-auto d-flex align-items-center">
+                    <span class="mr-2">Admin</span>
+                    <img src="./assets/adminProfilePic.jpg" alt="User Photo" class="user-photo" />
+                </div>
+            </nav>
+            <div class="container-fluid">
+                <h1 class="mt-4">Driver List</h1>
+                <div class="table-container">
+                    <table id="driverTable" class="display nowrap table table-striped table-bordered" style="width: 100%">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Name</th>
+                                <th>Contact No</th>
+                                <th>Email</th>
+                                <th>Assigned Vehicle Number</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Data will be populated here by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="/js/driver-list.js"></script>
+</body>
+</html>

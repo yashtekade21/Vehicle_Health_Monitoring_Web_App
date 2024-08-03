@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars</title>
+    <!-- Link to Bootstrap CSS for styling -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Link to FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Link to custom CSS for additional styles -->
+    <link rel="stylesheet" href="./css/vehicleList.css">
+</head>
+<body>
+    <!-- Main container for page content -->
+    <div class="container mt-4">
+        <!-- Header section with navigation and action buttons -->
+        <div class="d-flex justify-content-between align-items-center">
+            <!-- Button to go back to the dashboard -->
+            <button class="btn btn-primary" onclick="window.location.href='./admin-dashboard.html'">
+                <i class="fas fa-arrow-left"></i> Back to Dashboard
+            </button>
+            <!-- Page title -->
+            <h1 class="display-4">Cars List</h1>
+            <!-- Button to show the form for adding a new car -->
+            <button class="btn btn-primary" onclick="showAddVehicleForm()">
+                <i class="fas fa-plus"></i> Add Car
+            </button>
+        </div>
+
+        <!-- Search input for filtering the table -->
+        <div class="input-group my-3">
+            <input id="searchInput" type="search" class="form-control" placeholder="Search Data...">
+            <div class="input-group-append">
+                <span class="input-group-text"><i class="fas fa-search"></i></span>
+            </div>
+        </div>
+
+        <!-- Form for adding or editing a car (initially hidden) -->
+        <div id="addVehicleForm" class="d-none">
+            <input id="vehicleId" type="hidden"> <!-- Hidden input for vehicle ID (for editing) -->
+            <div class="form-row">
+                <!-- Input for vehicle model name -->
+                <div class="form-group col-md-4">
+                    <input id="vehicleModel" type="text" class="form-control" placeholder="Model Name">
+                </div>
+                <!-- Input for vehicle number plate -->
+                <div class="form-group col-md-4">
+                    <input id="vehicleNumber" type="text" class="form-control" placeholder="Number Plate">
+                </div>
+                <!-- Dropdown for selecting an assigned driver -->
+                <div class="form-group col-md-4">
+                    <select id="assignedDriver" class="form-control">
+                        <option value="">Select Assigned Driver</option>
+                        <!-- Options for drivers will be populated dynamically -->
+                    </select>
+                </div>
+                <!-- Button to save the car details -->
+                <div class="form-group col-md-4">
+                    <button id="submitBtn" class="btn btn-success" onclick="saveVehicle()">Save Car</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Table for displaying the list of cars -->
+        <div class="table-responsive">
+            <table id="carsTable" class="table table-hover table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Id</th>
+                        <th>Model Name</th>
+                        <th>Number Plate</th>
+                        <th>Assigned Driver</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table body will be filled dynamically with car data -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Link to custom JavaScript file for handling car list functionality -->
+    <script src="./js/carList.js"></script>
+</body>
+</html>

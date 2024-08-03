@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <!-- Link to Bootstrap CSS for styling -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Link to FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Link to custom CSS for additional styles -->
+    <link rel="stylesheet" href="./css/adminSettings.css">
+</head>
+<body>
+    <!-- Main container for the settings page layout -->
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar for navigation -->
+        <div id="sidebar-wrapper">
+            <div class="sidebar-heading text-center text-white py-3 primary-text fs-4 fw-bold text-uppercase border-bottom">
+                AutoHealthTracker
+            </div>
+            <div class="list-group list-group-flush my-3">
+                <!-- Navigation links in the sidebar -->
+                <a href="./admin-dashboard.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fas fa-tachometer-alt"></i> Dashboard
+                </a>
+                <a href="./driver-list.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fas fa-users"></i> Drivers
+                </a>
+                <a href="./admin-profile.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fas fa-user-circle"></i> Profile
+                </a>
+                <a href="#admin-settings" class="list-group-item list-group-item-action bg-transparent second-text fw-bold active">
+                    <i class="fas fa-cog"></i> Settings
+                </a>
+                <a href="./login.html" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold">
+                    <i class="fas fa-sign-out-alt"></i> Sign Out
+                </a>
+            </div>
+        </div>
+        <!-- Page content -->
+        <div id="page-content-wrapper">
+            <!-- Navbar with branding and user info -->
+            <nav class="navbar navbar-expand-lg fw-bold border-bottom">
+                <!-- Button to toggle the sidebar -->
+                <button class="btn btn-primary" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="navbar-center">
+                    <img src="./assets/Logo.png" alt="Company Icon" class="company-icon mr-2">
+                    <span class="navbar-brand mb-0 h1">Auto Health Tracker</span>
+                </div>
+                <div class="ml-auto d-flex align-items-center">
+                    <span id="profileName">Admin</span>
+                    <img src="./assets/adminProfilePic.jpg" alt="User Photo" class="user-photo">
+                </div>
+            </nav>
+            <!-- Main content section -->
+            <section class="content">
+                <h1>Settings</h1>
+                <!-- Section for changing the theme -->
+                <div class="settings-section">
+                    <h3>Change Theme</h3>
+                    <button onclick="changeTheme('light')">Light Theme</button>
+                    <button onclick="changeTheme('dark')">Dark Theme</button>
+                </div>
+                <!-- Section for editing the profile -->
+                <div class="settings-section">
+                    <h3>Edit Profile</h3>
+                    <form id="editProfileForm">
+                        <label for="editName">Name:</label>
+                        <input type="text" id="editName" name="editName" required>
+   
+                        <label for="editProfilePic">Profile Picture:</label>
+                        <input type="file" id="editProfilePic" name="editProfilePic" accept="image/*">
+   
+                        <button type="button" onclick="saveProfile()">Save Profile</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+ 
+    <!-- Scripts for functionality -->
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Popper.js for Bootstrap components -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JavaScript for settings -->
+    <script src="./js/adminSettings.js"></script>
+    <!-- Script to toggle sidebar visibility -->
+    <script>
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>    
+</body>
+</html>

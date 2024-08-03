@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trucks</title>
+    <!-- Include Bootstrap CSS for styling and layout -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <!-- Link to custom CSS for additional styling -->
+    <link rel="stylesheet" href="./css/vehicleList.css" />
+</head>
+<body>
+    <!-- Container for the page content -->
+    <div class="container mt-4">
+        <!-- Header section with buttons and title -->
+        <div class="d-flex justify-content-between align-items-center">
+            <!-- Button to go back to the admin dashboard -->
+            <button class="btn btn-primary" onclick="window.location.href='./admin-dashboard.html'">
+                <i class="fas fa-arrow-left"></i> Back to Dashboard
+            </button>
+            <!-- Title for the trucks list page -->
+            <h1 class="display-4">Trucks List</h1>
+            <!-- Button to show the form for adding a new truck -->
+            <button class="btn btn-primary" onclick="showAddTruckForm()">
+                <i class="fas fa-plus"></i> Add Truck
+            </button>
+        </div>
+        <!-- Search input field -->
+        <div class="input-group my-3">
+            <input id="searchInput" type="search" class="form-control" placeholder="Search Data..." />
+            <div class="input-group-append">
+                <span class="input-group-text"><i class="fas fa-search"></i></span>
+            </div>
+        </div>
+        <!-- Form for adding a new truck, initially hidden -->
+        <div id="addTruckForm" class="d-none">
+            <input id="truckId" type="hidden" />
+            <div class="form-row">
+                <!-- Input for truck model name -->
+                <div class="form-group col-md-4">
+                    <input id="truckModel" type="text" class="form-control" placeholder="Model Name" />
+                </div>
+                <!-- Input for truck number plate -->
+                <div class="form-group col-md-4">
+                    <input id="truckNumber" type="text" class="form-control" placeholder="Number Plate" />
+                </div>
+                <!-- Dropdown for selecting an assigned driver -->
+                <div class="form-group col-md-4">
+                    <select id="assignedDriver" class="form-control">
+                        <option value="">Select Assigned Driver</option>
+                        <!-- Options will be dynamically added -->
+                    </select>
+                </div>
+                <!-- Button to save the new truck details -->
+                <div class="form-group col-md-4">
+                    <button id="submitBtn" class="btn btn-success" onclick="saveTruck()">Save Truck</button>
+                </div>
+            </div>
+        </div>
+        <!-- Table to display the list of trucks -->
+        <div class="table-responsive">
+            <table id="trucksTable" class="table table-hover table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Id</th>
+                        <th>Model Name</th>
+                        <th>Number Plate</th>
+                        <th>Assigned Driver</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table rows will be dynamically filled with truck data -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- Link to custom JavaScript for handling functionality -->
+    <script src="./js/truckList.js"></script>
+</body>
+</html>

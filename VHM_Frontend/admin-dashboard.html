@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <!-- Link to Bootstrap CSS for styling -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Link to FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Link to custom CSS for additional styles -->
+    <link rel="stylesheet" href="./css/admin_dashboard.css">
+</head>
+<body>
+    <!-- Main container for the dashboard layout -->
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar for navigation -->
+        <div id="sidebar-wrapper">
+            <div class="sidebar-heading text-center text-white py-3 primary-text fs-4 fw-bold text-uppercase border-bottom">
+                AutoHealthTracker
+            </div>
+            <div class="list-group list-group-flush my-3">
+                <!-- Navigation links in the sidebar -->
+                <a href="#dashboard" class="list-group-item list-group-item-action bg-transparent second-text fw-bold active">
+                    <i class="fas fa-tachometer-alt"></i> Dashboard
+                </a>
+                <a href="./driver-list.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fas fa-users"></i> Drivers
+                </a>
+                <a href="./adminProfile.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fas fa-user-circle"></i> Profile
+                </a>
+                <a href="./admin-settings.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fas fa-cog"></i> Settings
+                </a>
+                <a href="./login.html" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold">
+                    <i class="fas fa-sign-out-alt"></i> Sign Out
+                </a>
+            </div>
+        </div>
+        <!-- Page content -->
+        <div id="page-content-wrapper">
+            <!-- Navbar with branding and user info -->
+            <nav class="navbar navbar-expand-lg fw-bold border-bottom">
+                <!-- Button to toggle the sidebar -->
+                <button class="btn btn-primary" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="navbar-center">
+                    <img src="./assets/Logo.png" alt="Company Icon" class="company-icon mr-2">
+                    <span class="navbar-brand mb-0 h1">Auto Health Tracker</span>
+                </div>
+                <div class="ml-auto d-flex align-items-center">
+                    <span class="mr-2">Admin</span>
+                    <img src="./assets/adminProfilePic.jpg" alt="User Photo" class="user-photo">
+                </div>
+            </nav>
+            <!-- Main content section -->
+            <section class="content">
+                <h1>Admin Dashboard</h1>
+                <!-- Card container for different vehicle types -->
+                <div class="card-container">
+                    <!-- Card for Car -->
+                    <div class="card">
+                        <img src="./assets/car.jfif" alt="Car" class="card-image">
+                        <div class="card-content">
+                            <h2>Car</h2>
+                            <div class="btn-container">
+                                <a href="./car-list.html">
+                                    <button class="primary-btn">View List</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card for Bike -->
+                    <div class="card">
+                        <img src="./assets/bike.webp" alt="Bike" class="card-image">
+                        <div class="card-content">
+                            <h2>Bike</h2>
+                            <div class="btn-container">
+                                <a href="./bike-list.html">
+                                    <button class="primary-btn">View List</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card for Truck -->
+                    <div class="card">
+                        <img src="./assets/truck.jfif" alt="Truck" class="card-image">
+                        <div class="card-content">
+                            <h2>Truck</h2>
+                            <div class="btn-container">
+                                <a href="./truck-list.html">
+                                    <button class="primary-btn">View List</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>        
+        </div>
+    </div>
+
+    <!-- Scripts for functionality -->
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Popper.js for Bootstrap components -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JavaScript (currently commented out) -->
+    <!-- <script src="./js/admin-dashboard-script.js"></script> -->
+    <!-- Script to toggle sidebar visibility -->
+    <script>
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+</body>
+</html>

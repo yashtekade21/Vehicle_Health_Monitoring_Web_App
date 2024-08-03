@@ -1,0 +1,126 @@
+/* Basic body styling */
+body {
+    margin: 0; /* Remove default margin */
+    font-family: Arial, Helvetica, sans-serif; /* Set font family */
+    background-color: #ebefff; /* Set background color */
+  }
+   
+  /* Flex container for layout */
+  #wrapper {
+    display: flex; /* Use flexbox for layout */
+    align-items: stretch; /* Align items to stretch */
+  }
+   
+  /* Sidebar styling */
+  #sidebar-wrapper {
+    min-height: 100vh; /* Full viewport height */
+    width: 250px; /* Fixed width */
+    margin-left: -250px; /* Initially hide the sidebar */
+    transition: margin 0.25s ease-out; /* Smooth transition for sliding effect */
+    background-color: #800080; /* Sidebar background color */
+  }
+   
+  /* Show sidebar when toggled */
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: 0; /* Reset margin to show the sidebar */
+  }
+   
+  /* Page content area styling */
+  #page-content-wrapper {
+    width: 100%; /* Full width */
+  }
+   
+  /* Sidebar heading styling */
+  .sidebar-heading {
+    font-size: 1rem; /* Font size */
+    background: #800080; /* Background color */
+    padding: 0.75rem 1rem; /* Padding */
+    text-align: center; /* Center text */
+    color: #fff; /* Text color */
+  }
+   
+  /* List group item styling */
+  .list-group-item {
+    border: none; /* Remove border */
+    color: #ddd; /* Text color */
+  }
+   
+  /* Active list group item styling */
+  .list-group-item.active {
+    background-color: #c0c0c1; /* Background color */
+    color: rgb(81, 203, 255); /* Text color */
+  }
+   
+  /* Hover effect for list group items */
+  .list-group-item:hover {
+    background-color: rgb(81, 203, 255); /* Background color on hover */
+  }
+   
+  /* Navbar brand styling */
+  .navbar-light .navbar-brand {
+    color: black; /* Text color */
+  }
+   
+  /* Company icon styling */
+  .company-icon {
+    height: 40px; /* Height */
+    margin-right: 10px; /* Margin to the right */
+  }
+   
+  /* User photo styling */
+  .user-photo {
+    height: 40px; /* Height */
+    border-radius: 50%; /* Make it circular */
+  }
+   
+  /* Table container styling */
+  .table-container {
+    margin: 20px; /* Margin */
+    background-color: white; /* Background color */
+    padding: 30px; /* Padding */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  }
+   
+  /* Dark table header styling */
+  .thead-dark th {
+    background-color: #343a40; /* Background color */
+    color: #fff; /* Text color */
+  }
+   
+  /* DataTables button styling */
+  .dataTables_wrapper .dt-buttons {
+    margin-bottom: 10px; /* Margin below the buttons */
+  }
+   
+  /* DataTables filter input styling */
+  .dataTables_filter input {
+    margin-left: 0.5em; /* Margin on the left */
+    border-radius: 0.25rem; /* Rounded corners */
+  }
+   
+  /* DataTables pagination button styling */
+  .dataTables_wrapper .dataTables_paginate .paginate_button {
+    border-radius: 0.25rem; /* Rounded corners */
+  }
+   
+  /* Primary button styling */
+  .btn-primary {
+    /* background-color: blue; */ /* Background color (commented out) */
+    border-color: #343a40; /* Border color */
+  }
+   
+  /* Sidebar background color */
+  #sidebar-wrapper {
+    background-color: #800080; /* Background color */
+  }
+   
+  /* Centered navbar styling */
+  .navbar-center {
+    position: absolute; /* Absolute positioning */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Offset by 50% of its own width */
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Align items centrally */
+  }
+  

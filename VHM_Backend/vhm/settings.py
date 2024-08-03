@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'bikeData',
     'carData',
     'truckData',
-    'driverData',
 ]
 
 MIDDLEWARE = [
